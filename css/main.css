@@ -274,6 +274,10 @@ ul {
     padding-bottom: 1.5rem;
 }
 
+::placeholder {
+    color: #DCDCDC;
+}
+
 .about__form-text-input {
     font-family: NeueMontrealRegular;
     border-style: none;
