@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>About</title>
+    <meta name="description" content="Brian Hyun | Frontend Web Developer, Portfolio" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="Brian Hyun | Frontend Web Developer, Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.brianhyun.com" />
+    <meta property="og:image" content="" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <meta name="theme-color" content="#fafafa" />
+</head>
+
+<body>
+    <header class="main-header">
+        <a class="main-header__logotype" href="#">Brian Hyun</a>
+        <nav class="main-header__nav">
+            <ul class="main-header__item-list">
+                <li class="main-header__item main-header__item--active"><a class="main-header__link" href="./about.html">About</a></li>
+                <li class="main-header__item"><a class="main-header__link" href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="main-header__burger">
+            <div class="main-header__line"></div>
+            <div class="main-header__line"></div>
+        </div>
+    </header>
+
+    <main class="about">
+        <h1 class="about__header">Thanks for wanting to reach out!</h1>
+        <form class="about__form" onsubmit="return validateForm()">
+            <p class="about__form-item">
+                <label class="about__form-label" for="name">Name*</label>
+                <input class="about__form-text-input about__form-input" id="name" type="text" value="" required autofocus>
+            </p>
+            <p class="about__form-item">
+                <label class="about__form-label" for="email">Email*</label>
+                <input class="about__form-text-input about__form-input" id="email" type="email" value="" required>
+            </p>
+            <p class="about__form-item">
+                <label class="about__form-label" for="message">Message*</label>
+                <textarea class="about__form-message about__form-input" id="message" name="message" cols="30" rows="10" value="" required></textarea>
+            </p>
+            <button class="about__form-button" type="submit">Send</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <nav class="footer__nav">
+            <h1 class="footer__header">Quick Links</h1>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a class="footer__links" href="#linkedin">LinkedIn</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__links" href="#github">GitHub</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__links" href="#resume">Resume</a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="footer__nav">
+            <h1 class="footer__header">Quick Connect</h1>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a class="footer__links" href="mailto:hyunbrian97@gmail.com">hyunbrian97@gmail.com</a>
+                </li>
+            </ul>
+        </nav>
+
+        <p class="footer__copyright">
+            Copyright Brian Hyun ©2020. All rights reserved.
+        </p>
+    </footer>
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+        window.ga = function() {
+            ga.q.push(arguments);
+        };
+        ga.q = [];
+        ga.l = +new Date();
+        ga("create", "UA-XXXXX-Y", "auto");
+        ga("set", "anonymizeIp", true);
+        ga("set", "transport", "beacon");
+        ga("send", "pageview");
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

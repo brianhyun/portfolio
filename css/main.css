@@ -1,0 +1,644 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+/*
+ * Web Fonts
+ */
+
+@font-face {
+    font-family: NeueMontrealBold;
+    src: url(../fonts/neue_montreal_bold.woff);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: NeueMontrealRegular;
+    src: url(../fonts/neue_montreal_regular.woff);
+}
+
+html {
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: white;
+    font-family: NeueMontrealRegular;
+    font-size: 16px;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*
+ * Header Section
+ */
+
+.main-header {
+    align-items: center;
+    display: flex;
+    height: 13vh;
+    justify-content: space-between;
+    padding: 1.25rem;
+}
+
+.main-header__logotype {
+    color: black;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.main-header__nav {
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 13vh;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s ease;
+}
+
+.main-header__nav--active {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.2s ease;
+}
+
+.main-header__item-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-header__item {
+    border-bottom: 1px solid #B0B0B0;
+    padding: 0.5rem 1.25rem;
+}
+
+.main-header__item:first-child {
+    border-top: 1px solid #B0B0B0;
+}
+
+.main-header__link {
+    color: #757575;
+    font-size: 20px;
+    text-decoration: none;
+    /* for underline animation on hover */
+    position: relative;
+}
+
+.main-header__link:hover {
+    color: black;
+    transition: 0.3s ease;
+}
+
+.main-header__burger {
+    display: block;
+}
+
+.main-header__line {
+    background-color: #B0B0B0;
+    height: 1px;
+    width: 18px;
+    margin-bottom: 8px;
+}
+
+.main-header__line:last-child {
+    margin: 0;
+}
+
+
+/*
+ * Main Section
+ */
+
+.projects {
+    display: grid;
+    grid-auto-rows: 320px;
+    grid-gap: 4px;
+    gap: 4px;
+    margin: 0 4px;
+}
+
+.projects__link {
+    background: linear-gradient(to left, #09C6F9, #045DE9);
+    overflow: hidden;
+}
+
+.projects__link:last-child {
+    margin-bottom: 0;
+}
+
+
+/*
+ * About Section
+ */
+
+.about {
+    font-family: NeueMontrealBold;
+    padding: 2rem 1.25rem;
+}
+
+.about__header {
+    font-size: 20px;
+    padding: 2rem 0 3rem 0;
+}
+
+.about__form {
+    width: 100%;
+}
+
+.about__form-item {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.5rem;
+}
+
+.about__form-text-input {
+    font-family: NeueMontrealRegular;
+    border-style: none;
+    border-bottom: 2px solid #DCDCDC;
+    padding: 0 0 0.5rem 0;
+}
+
+.about__form-message {
+    border: 2px solid #DCDCDC;
+    font-family: NeueMontrealRegular;
+    line-height: 1.5;
+    padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+}
+
+.about__form-text-input:focus,
+.about__form-message:focus {
+    border-color: black;
+    transition: 0.3s ease;
+    outline: none;
+}
+
+.about__form-label {
+    font-size: 18px;
+    padding-bottom: 0.5rem;
+}
+
+.about__form-button {
+    background-color: #DCDCDC;
+    border-style: solid;
+    border-color: #DCDCDC;
+    color: white;
+    letter-spacing: 5px;
+    padding: 1rem;
+    text-transform: uppercase;
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+.about__form-button:focus {
+    outline: none;
+}
+
+.about__form-button:hover {
+    cursor: pointer;
+}
+
+
+/*
+ * Footer Section
+ */
+
+.footer {
+    min-height: 50vh;
+    padding: 3.125rem 0 1.25rem;
+}
+
+.footer__nav {
+    margin-bottom: 3.125rem;
+    padding-left: 1.25rem;
+}
+
+.footer__header {
+    font-family: NeueMontrealBold;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    padding-bottom: 1.5rem;
+}
+
+.footer__links {
+    color: black;
+    text-decoration: none;
+    /* for the underline animation on hover */
+    position: relative;
+}
+
+.footer__links:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer__links:hover:before {
+    visibility: visible;
+    width: 100%;
+}
+
+.footer__item {
+    margin-bottom: 0.625rem;
+}
+
+.footer__copyright {
+    font-size: 10px;
+    padding-left: 1.25rem;
+}
+
+
+/*
+ * Media Queries
+ */
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 550px) {
+    .main-header__logotype {
+        font-family: NeueMontrealBold;
+        font-size: 25px;
+        letter-spacing: 1px;
+    }
+    .main-header__nav {
+        position: static;
+        visibility: visible;
+        opacity: 1;
+        width: 50%;
+    }
+    .main-header__item-list {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .main-header__item {
+        border: 0;
+        padding: 0 0 0 1.5rem;
+    }
+    .main-header__item:first-child {
+        border: 0;
+        padding: 0;
+    }
+    .main-header__burger {
+        display: none;
+    }
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    .main-header {
+        height: 15vh;
+    }
+    .main-header__logotype {
+        font-size: 30px;
+    }
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+    .main-header__logotype {
+        font-size: 36px;
+    }
+    .main-header__item {
+        font-size: 20px;
+    }
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .projects__link:first-child {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+    .projects__link:last-child {
+        grid-column: 2 / 4;
+        grid-row: 2;
+    }
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer__item {
+        font-size: 20px;
+    }
+    .footer__copyright {
+        font-size: 12px;
+        grid-column: 1 / 2;
+        grid-row: 2;
+    }
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+    display: none !important;
+}
+
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    /* 1 */
+}
+
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
+}
+
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+    content: " ";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *::before,
+    *::after {
+        background: #fff !important;
+        color: #000 !important;
+        /* Black prints faster */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]::after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]::after {
+        content: " (" attr(title) ")";
+    }
+    /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+    a[href^="#"]::after,
+    a[href^="javascript:"]::after {
+        content: "";
+    }
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+    thead {
+        display: table-header-group;
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
