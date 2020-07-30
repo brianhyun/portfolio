@@ -23,44 +23,73 @@
 </head>
 
 <body>
+    <!-- Main Header -->
     <header class="main-header">
+        <!-- Logotype -->
         <a class="main-header__logotype" href="#">Brian Hyun</a>
+        <!-- Nav -->
         <nav class="main-header__nav">
             <ul class="main-header__item-list">
-                <li class="main-header__item main-header__item--active"><a class="main-header__link" href="./about.html">About</a></li>
+                <li class="main-header__item"><a class="main-header__link main-header__link--active" href="./about.html">About</a></li>
                 <li class="main-header__item"><a class="main-header__link" href="./contact.html">Contact</a></li>
             </ul>
         </nav>
+        <!-- Burger Menu -->
         <div class="main-header__burger">
             <div class="main-header__line"></div>
             <div class="main-header__line"></div>
         </div>
     </header>
 
-    <main class="about">
-        <h1 class="about__header">Thanks for wanting to reach out!</h1>
-        <form class="about__form" action="contactform.php" method="post" onsubmit="return validateForm()">
-            <p class="about__form-item">
-                <label class="about__form-label" for="name">Name*</label>
-                <input class="about__form-text-input about__form-input" id="name" name="name" type="text" value="" placeholder="Full name" required autofocus>
-            </p>
-            <p class="about__form-item">
-                <label class="about__form-label" for="email">Email*</label>
-                <input class="about__form-text-input about__form-input" id="email" name="email" type="email" value="" placeholder="email@email.com" required>
-            </p>
-            <p class="about__form-item">
-                <label class="about__form-label" for="subject">Subject*</label>
-                <input class="about__form-text-input about__form-input" id="subject" name="subject" type="text" value="" placeholder="Anchovies on pizza are great!" required>
-            </p>
-            <p class="about__form-item">
-                <label class="about__form-label" for="message">Message*</label>
-                <textarea class="about__form-message about__form-input" id="message" name="message" cols="30" rows="10" value="" placeholder="They're salty and add texture--wonderful gustatory additions." required></textarea>
-            </p>
-            <button class="about__form-button" type="submit" name="submit">Send</button>
-        </form>
+    <!-- About Content -->
+    <main class="contact">
+        <!-- Header -->
+        <h1 class="contact__header">Questions and Answers with Brian Hyun</h1>
+        <!-- Block 1 -->
+        <div class="contact__block">
+            <h1 class="contact__question">You lack experience. <br> Why should I hire you?</h1>
+            <div class="contact__answer">
+                <p class="contact__paragraph">I assume you’ve taken a look at my projects. But, I guess you need a bit more convincing.</p>
+                <p class="contact__paragraph">Hmm...I thought about it, and I’m not sure how to convince you. If my projects don’t convince you of my capabilities, then I don’t know what will. Everything else would be rhetoric, no?</p>
+            </div>
+        </div>
+        <!-- Block 2 -->
+        <div class="contact__block">
+            <h1 class="contact__question">Who are you really?</h1>
+            <div class="contact__answer">
+                <p class="contact__paragraph">I’m someone trying to find life’s meaning through programming. It has a lot to teach in terms of failure-tolerance, something I’ve always struggled with. However, my pain-tolerance makes me a bit insane in the head, so I’ve never really
+                    known when to give up.</p>
+            </div>
+        </div>
+        <!-- Block 3 -->
+        <div class="contact__block">
+            <h1 class="contact__question">Why web development? <br> And, why front-end specifically?</h1>
+            <div class="contact__answer">
+                <p class="contact__paragraph">Web development is immediately gratifying. There’s nothing like writing code and seeing the results of your creation in an ‘alt-tab, cmd+r.’</p>
+                <p class="contact__paragraph">Front-end is where visual design meets programming and, since I like both, that’s where I want to be. But, I’m not deaf to Backend since that’s my current end goal: becoming a Full Stack Developer. But, I’m in no particular rush and taking
+                    it one step at a time seems wise.</p>
+            </div>
+        </div>
+        <!-- Block 4 -->
+        <div class="contact__block">
+            <h1 class="contact__question">Any hobbies?</h1>
+            <div class="contact__answer">
+                <p class="contact__paragraph">Outside of programming, I like bouldering and taking photos.</p>
+            </div>
+        </div>
+        <!-- Block 5 -->
+        <div class="contact__block">
+            <h1 class="contact__question">Life motivation?</h1>
+            <div class="contact__answer">
+                <p class="contact__paragraph">Becoming someone I can be proud of.</p>
+                <p class="contact__paragraph">Doing something for this world. </p>
+            </div>
+        </div>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
+        <!-- Nav One -->
         <nav class="footer__nav">
             <h1 class="footer__header">Quick Links</h1>
             <ul class="footer__list">
@@ -76,6 +105,7 @@
             </ul>
         </nav>
 
+        <!-- Nav Two -->
         <nav class="footer__nav">
             <h1 class="footer__header">Quick Connect</h1>
             <ul class="footer__list">
@@ -85,10 +115,13 @@
             </ul>
         </nav>
 
+        <!-- Copyright -->
         <p class="footer__copyright">
             Copyright Brian Hyun ©2020. All rights reserved.
         </p>
     </footer>
+
+    <!-- Scripts -->
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>

@@ -10,8 +10,8 @@ const navShow = () => {
 };
 
 // Form Validation - For IEv9 and previous. 
+// Check if all input has been submitted. And, if so, send form. 
 const validateForm = () => {
-    // Check if all input has been submitted. And, if so, send form. 
     const input = document.querySelectorAll(".about__form-input");
 
     let counter = 0;
@@ -21,13 +21,14 @@ const validateForm = () => {
         }
     }
 
-    if (counter === 3) {
+    if (counter === 4) {
         return false
     } else {
         return true;
     }
 }
 
+// Styles for send button when all input fields are filled with text. 
 const checkIfFilled = () => {
     const input = document.querySelectorAll(".about__form-input");
     const email = document.getElementById("email");
@@ -38,14 +39,12 @@ const checkIfFilled = () => {
             if (input[i].value === "") {
                 input[i].style.borderColor = "#DCDCDC";
             } else {
-                input[i].style.borderColor = "black";
+                input[i].style.borderColor = "#222";
             }
 
-            // When the user finishes entering the message, check all the other inputs to see if they have been filled. 
-            // If so, then change submit button style. 
-            if (input[0].value != "" && input[1].value != "" && input[2].value != "") {
-                button.style.borderColor = "black";
-                button.style.backgroundColor = "black";
+            if (input[0].value != "" && input[1].value != "" && input[2].value != "" && input[3].value != "") {
+                button.style.borderColor = "#222";
+                button.style.backgroundColor = "#222";
                 button.style.color = "white";
             } else {
                 button.style.borderColor = "#DCDCDC";
@@ -56,7 +55,21 @@ const checkIfFilled = () => {
     }
 }
 
+// Disable link if active. 
+const headerHoverStyles = () => {
+    const headerLinks = document.querySelectorAll(".main-header__link");
+
+    for (let i = 0; i < headerLinks.length; i++) {
+        headerLinks[i].addEventListener("mouseover", () => {
+            if (headerLinks[i].classList.contains("main-header__link--active")) {
+                headerLinks[i].style.pointerEvents = "none";
+            }
+        });
+    }
+};
+
 document.addEventListener("DOMContentLoaded", function(event) {
     navShow();
     checkIfFilled();
+    headerHoverStyles();
 });

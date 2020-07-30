@@ -162,11 +162,14 @@ ul {
 }
 
 .main-header__logotype {
-    color: black;
+    color: #222;
     font-size: 20px;
     text-transform: uppercase;
     text-decoration: none;
 }
+
+
+/* Nav Styles */
 
 .main-header__nav {
     background-color: white;
@@ -199,18 +202,25 @@ ul {
     border-top: 1px solid #B0B0B0;
 }
 
+
+/* Link Styles */
+
 .main-header__link {
-    color: #757575;
+    color: #B0B0B0;
     font-size: 20px;
     text-decoration: none;
-    /* for underline animation on hover */
-    position: relative;
 }
 
 .main-header__link:hover {
-    color: black;
-    transition: 0.3s ease;
+    color: #222;
 }
+
+.main-header__link--active {
+    color: #222;
+}
+
+
+/* Burger Styles */
 
 .main-header__burger {
     display: block;
@@ -229,7 +239,7 @@ ul {
 
 
 /*
- * Main Section
+ * Project Section
  */
 
 .projects {
@@ -264,6 +274,9 @@ ul {
     padding: 2rem 0 3rem 0;
 }
 
+
+/* Form Styles */
+
 .about__form {
     width: 100%;
 }
@@ -294,7 +307,7 @@ ul {
 
 .about__form-text-input:focus,
 .about__form-message:focus {
-    border-color: black;
+    border-color: #222;
     transition: 0.3s ease;
     outline: none;
 }
@@ -326,6 +339,50 @@ ul {
 
 
 /*
+ * Contact Section
+ */
+
+.contact {
+    padding: 2rem 1.5rem 2rem 1.25rem;
+    width: 100%;
+}
+
+.contact__header,
+.contact__question {
+    font-family: NeueMontrealBold;
+}
+
+.contact__header {
+    font-size: 20px;
+    padding-bottom: 4rem;
+    padding-top: 2rem;
+    width: 70%;
+}
+
+.contact__block {
+    margin-bottom: 2.5rem;
+}
+
+.contact__question {
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+
+.contact__answer {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.contact__paragraph {
+    margin-bottom: 0.7rem;
+}
+
+.contact__paragraph:last-child {
+    margin-bottom: 0;
+}
+
+
+/*
  * Footer Section
  */
 
@@ -341,14 +398,15 @@ ul {
 
 .footer__header {
     font-family: NeueMontrealBold;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 0.5px;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
 }
 
 .footer__links {
-    color: black;
+    color: #222;
     text-decoration: none;
+    font-size: 17px;
     /* for the underline animation on hover */
     position: relative;
 }
@@ -360,7 +418,7 @@ ul {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: black;
+    background-color: #222;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
 }
@@ -388,6 +446,7 @@ ul {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
 @media only screen and (min-width: 550px) {
+    /* Header */
     .main-header__logotype {
         font-family: NeueMontrealBold;
         font-size: 25px;
@@ -411,11 +470,38 @@ ul {
         border: 0;
         padding: 0;
     }
+    .main-header__link {
+        /* for underline animation on hover */
+        position: relative;
+    }
+    .main-header__link--active {
+        font-family: NeueMontrealBold;
+    }
+    .main-header__link:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #222;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+    .main-header__link:hover:before {
+        visibility: visible;
+        width: 100%;
+    }
     .main-header__burger {
         display: none;
     }
+    /* Projects Section */
     .projects {
         grid-template-columns: repeat(2, 1fr);
+    }
+    /* Contact Section */
+    .contact {
+        width: 500px;
     }
 }
 
@@ -423,12 +509,14 @@ ul {
 /* Medium devices (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
+    /* Header */
     .main-header {
         height: 15vh;
     }
     .main-header__logotype {
         font-size: 30px;
     }
+    /* Footer */
     .footer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -444,12 +532,14 @@ ul {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 
 @media only screen and (min-width: 1200px) {
+    /* Header */
     .main-header__logotype {
         font-size: 36px;
     }
     .main-header__item {
         font-size: 20px;
     }
+    /* Projects */
     .projects {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -461,6 +551,7 @@ ul {
         grid-column: 2 / 4;
         grid-row: 2;
     }
+    /* Footer */
     .footer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
