@@ -15,6 +15,14 @@ app.get('/', (req, res, next) => {
     });
 });
 
+app.post('/', (req, res, next) => {
+    console.log(req.body);
+    res.render('success', {
+        path: '/',
+        pageTitle: 'Success'
+    })
+});
+
 app.get('/about', (req, res, next) => {
     res.render('about', {
         path: '/about',
@@ -26,6 +34,13 @@ app.get('/contact', (req, res, next) => {
     res.render('contact', {
         path: '/contact',
         pageTitle: 'Contact'
+    });
+});
+
+app.use((req, res, next) => {
+    res.render('404', {
+        path: '/404',
+        pageTitle: 'Page Not Found'
     });
 });
 
