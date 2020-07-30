@@ -1,7 +1,7 @@
 const express = require('express');
 const mailgun = require("mailgun-js");
 
-const { api_key, domain } = require('../config/config');
+// const { api_key, domain } = require('../config/config');
 
 const router = express.Router();
 
