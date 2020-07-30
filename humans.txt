@@ -3,7 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Brian Hyun -- Developer -- <twitter>
 
 # THANKS
 

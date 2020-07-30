@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+
+    <!-- Contact Content -->
+    <main class="contact">
+        <!-- Header -->
+        <h1 class="contact__header">Thanks for wanting to reach out!</h1>
+        <!-- Form -->
+        <form class="contact__form" action="contactform.php" method="post" onsubmit="return validateForm()">
+            <p class="contact__form-item">
+                <label class="contact__form-label" for="name">Name*</label>
+                <input class="contact__form-text-input contact__form-input" id="name" name="name" type="text" value="" placeholder="Full name" required autofocus>
+            </p>
+            <p class="contact__form-item">
+                <label class="contact__form-label" for="email">Email*</label>
+                <input class="contact__form-text-input contact__form-input" id="email" name="email" type="email" value="" placeholder="email@email.com" required>
+            </p>
+            <p class="contact__form-item">
+                <label class="contact__form-label" for="subject">Subject*</label>
+                <input class="contact__form-text-input contact__form-input" id="subject" name="subject" type="text" value="" placeholder="Anchovies on pizza are great!" required>
+            </p>
+            <p class="contact__form-item">
+                <label class="contact__form-label" for="message">Message*</label>
+                <textarea class="contact__form-message contact__form-input" id="message" name="message" cols="30" rows="10" value="" placeholder="They're salty and add texture--wonderful gustatory additions." required></textarea>
+            </p>
+            <button class="contact__form-button" type="submit" name="submit">Send</button>
+        </form>
+    </main>
+
+    <%- include('partials/footer') %>
