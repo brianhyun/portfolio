@@ -12,7 +12,7 @@ const navShow = () => {
 // Form Validation - For IEv9 and previous. 
 // Check if all input has been submitted. And, if so, send form. 
 const validateForm = () => {
-    const input = document.querySelectorAll(".about__form-input");
+    const input = document.querySelectorAll(".contact__form-input");
 
     let counter = 0;
     for (let i = 0; i < input.length; i++) {
@@ -30,9 +30,9 @@ const validateForm = () => {
 
 // Styles for send button when all input fields are filled with text. 
 const checkIfFilled = () => {
-    const input = document.querySelectorAll(".about__form-input");
+    const input = document.querySelectorAll(".contact__form-input");
     const email = document.getElementById("email");
-    const button = document.querySelector(".about__form-button");
+    const button = document.querySelector(".contact__form-button");
 
     for (let i = 0; i < input.length; i++) {
         input[i].addEventListener("keyup", () => {
