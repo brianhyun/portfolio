@@ -1,6 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
+const indexRouter = require('./routes/index');
+const aboutRouter = require('./routes/about');
+const contactRouter = require('./routes/contact');
+const errorController = require('./controllers/error');
+
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -8,41 +13,13 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
-app.get('/', (req, res, next) => {
-    res.render('index', {
-        path: '/',
-        pageTitle: 'Brian Hyun'
-    });
-});
+// Route Handling
+app.use(indexRouter);
+app.use(aboutRouter);
+app.use(contactRouter);
 
-app.post('/', (req, res, next) => {
-    console.log(req.body);
-    res.render('success', {
-        path: '/',
-        pageTitle: 'Success'
-    })
-});
-
-app.get('/about', (req, res, next) => {
-    res.render('about', {
-        path: '/about',
-        pageTitle: 'About'
-    });
-});
-
-app.get('/contact', (req, res, next) => {
-    res.render('contact', {
-        path: '/contact',
-        pageTitle: 'Contact'
-    });
-});
-
-app.use((req, res, next) => {
-    res.render('404', {
-        path: '/404',
-        pageTitle: 'Page Not Found'
-    });
-});
+// 404 Page Handling
+app.use(errorController);
 
 app.listen(3000, () => {
     console.log('Portfolio app listening on port', 3000);
