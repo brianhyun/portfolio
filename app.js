@@ -22,6 +22,6 @@ app.use(contactRouter);
 // 404 Page Handling
 app.use(errorController);
 
-app.listen(port, () => {
+app.listen(port || process.env.PORT, () => {
     console.log('Portfolio app listening on port', port);
 });
