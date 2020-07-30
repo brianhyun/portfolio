@@ -5,6 +5,7 @@ const indexRouter = require('./routes/index');
 const aboutRouter = require('./routes/about');
 const contactRouter = require('./routes/contact');
 const errorController = require('./controllers/error');
+const { port } = require('./config/config');
 
 const app = express();
 
@@ -21,6 +22,6 @@ app.use(contactRouter);
 // 404 Page Handling
 app.use(errorController);
 
-app.listen(3000, () => {
-    console.log('Portfolio app listening on port', 3000);
+app.listen(port, () => {
+    console.log('Portfolio app listening on port', port);
 });
