@@ -1,12 +1,12 @@
 {
-  "short_name": "",
-  "name": "",
-  "icons": [{
-    "src": "icon.png",
-    "type": "image/png",
-    "sizes": "192x192"
-  }],
-  "start_url": "/?utm_source=homescreen",
-  "background_color": "#fafafa",
-  "theme_color": "#fafafa"
+    "short_name": "Brian Hyun Portfolio",
+    "name": "Brian Hyun, Frontend Developer | Portfolio",
+    "icons": [{
+        "src": "public/img/icon.png",
+        "type": "image/png",
+        "sizes": "57x57"
+    }],
+    "start_url": "/?utm_source=homescreen",
+    "background_color": "#fafafa",
+    "theme_color": "#fafafa"
 }
