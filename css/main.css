@@ -116,6 +116,7 @@ textarea {
 html {
     box-sizing: border-box;
     min-height: 100vh;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -129,6 +130,8 @@ body {
     font-family: NeueMontrealRegular;
     font-size: 16px;
     min-height: 100vh;
+    /* for to-top btn */
+    position: relative;
 }
 
 h1,
@@ -167,6 +170,21 @@ ul {
 
  ::-webkit-scrollbar-thumb:hover {
     background: #444;
+}
+
+
+/*
+ * To Top Btn 
+ */
+
+.to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.to-top-btn:hover {
+    cursor: pointer;
 }
 
 
@@ -577,6 +595,9 @@ ul {
     .contact {
         width: 65%;
     }
+    .contact__form-item {
+        margin-bottom: 0.5rem;
+    }
     /* About */
     .about__header {
         font-size: 100px;
@@ -627,6 +648,9 @@ ul {
     .contact__form {
         width: 50%;
     }
+    .contact__form-item {
+        margin-bottom: 1rem;
+    }
     .contact__form-label {
         font-size: 22px;
         padding-bottom: 1rem;
@@ -674,6 +698,9 @@ ul {
     .contact__header {
         font-size: 45px;
         padding: 5rem 0;
+    }
+    .contact__form-item {
+        margin-bottom: 1.5rem;
     }
     .contact__form-input {
         font-size: 25px;
