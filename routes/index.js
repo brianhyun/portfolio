@@ -16,7 +16,7 @@ router.post('/', (req, res, next) => {
     const subject = req.body.subject;
     const message = req.body.message;
 
-    const mg = mailgun({ apiKey: api_key, domain: domain });
+    const mg = mailgun({ apiKey: process.env.api_key, domain: process.env.domain });
     const data = {
         from: `${name} <${email}>`,
         to: 'hyunbrian97@gmail.com',
