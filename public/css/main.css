@@ -330,14 +330,29 @@ ul {
 }
 
 .projects__link {
+    align-items: center;
     background: linear-gradient(to left, #09C6F9, #045DE9);
+    display: flex; 
+    justify-content: center;
     overflow: hidden;
+}
+
+.projects__link:first-child {
+    background: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+}
+
+.projects__link:nth-child(2) {
+    background: linear-gradient(315deg, #017B5F 0%, #98DE5B 74%);
 }
 
 .projects__link:last-child {
     margin-bottom: 0;
 }
 
+.projects__image {
+    height: 150px;
+    width: 150px;
+}
 
 /*
  * About Section
@@ -497,7 +512,7 @@ ul {
     content: "";
     position: absolute;
     width: 0;
-    height: 5px;
+    height: 4px;
     bottom: -5px;
     left: 0;
     background-color: #222;
@@ -571,7 +586,7 @@ ul {
         content: "";
         position: absolute;
         width: 0;
-        height: 5px;
+        height: 4px;
         bottom: -5px;
         left: 0;
         background-color: #222;
