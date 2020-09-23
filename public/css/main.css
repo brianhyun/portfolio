@@ -345,6 +345,14 @@ ul {
     background: linear-gradient(315deg, #017B5F 0%, #98DE5B 74%);
 }
 
+.projects__link:nth-child(3) {
+    background: linear-gradient(315deg, #EC9F05 0%, #FF4E00 74%);
+}
+
+.projects__link:nth-child(4) {
+    background: linear-gradient(315deg, #FFDD00 0%, #FBB034 74%);
+}
+
 .projects__link:last-child {
     margin-bottom: 0;
 }
