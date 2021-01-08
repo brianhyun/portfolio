@@ -1,38 +1,38 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "Brian Hyun - Front Developer, Portfolio",
-  "main": "app.js",
-  "directories": {
-    "doc": "doc"
-  },
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "dotenv": "^8.2.0",
-    "ejs": "^3.1.3",
-    "express": "^4.17.1",
-    "mailgun-js": "^0.22.0",
-    "nodemon": "^2.0.4"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js", 
-    "devStart": "nodemon app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/brianhyun/portfolio.git"
-  },
-  "keywords": [
-    "portfolio",
-    "frontend",
-    "developer"
-  ],
-  "author": "Brian Hyun",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/brianhyun/portfolio/issues"
-  },
-  "homepage": "https://github.com/brianhyun/portfolio#readme"
+    "name": "portfolio",
+    "version": "1.0.0",
+    "description": "Brian Hyun - Front Developer, Portfolio",
+    "main": "app.js",
+    "directories": {
+        "doc": "doc"
+    },
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "dotenv": "^8.2.0",
+        "ejs": "^3.1.3",
+        "express": "^4.17.1",
+        "mailgun-js": "^0.22.0",
+        "nodemon": "^2.0.4"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app.js",
+        "dev": "nodemon app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/brianhyun/portfolio.git"
+    },
+    "keywords": [
+        "portfolio",
+        "frontend",
+        "developer"
+    ],
+    "author": "Brian Hyun",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/brianhyun/portfolio/issues"
+    },
+    "homepage": "https://github.com/brianhyun/portfolio#readme"
 }
