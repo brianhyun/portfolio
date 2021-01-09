@@ -1,15 +1,12 @@
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
 
-
 /* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
-
 
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
-
 
 /* ==========================================================================
    Base styles: opinionated defaults
@@ -20,7 +17,6 @@ html {
     font-size: 1em;
     line-height: 1.4;
 }
-
 
 /*
  * Remove text-shadow in selection highlight:
@@ -42,7 +38,6 @@ html {
     text-shadow: none;
 }
 
-
 /*
  * A better looking default horizontal rule
  */
@@ -55,7 +50,6 @@ hr {
     margin: 1em 0;
     padding: 0;
 }
-
 
 /*
  * Remove the gap between audio, canvas, iframes,
@@ -72,7 +66,6 @@ video {
     vertical-align: middle;
 }
 
-
 /*
  * Remove default fieldset styles.
  */
@@ -83,7 +76,6 @@ fieldset {
     padding: 0;
 }
 
-
 /*
  * Allow only vertical resizing of textareas.
  */
@@ -92,11 +84,9 @@ textarea {
     resize: vertical;
 }
 
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
 
 /*
  * Web Fonts
@@ -151,7 +141,6 @@ ul {
     padding: 0;
 }
 
-
 /* Flash of Unstyled Content */
 
 .no-js {
@@ -164,7 +153,6 @@ ul {
     opacity: 1;
 }
 
-
 /*
  * Scrollbar 
  */
@@ -173,18 +161,17 @@ ul {
     width: 15px;
 }
 
- ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: transparent;
 }
 
- ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: #222;
 }
 
- ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background: #444;
 }
-
 
 /*
  * To Top Btn 
@@ -199,7 +186,6 @@ ul {
 .to-top-btn:hover {
     cursor: pointer;
 }
-
 
 /*
  * Header Section
@@ -219,7 +205,6 @@ ul {
     text-transform: uppercase;
     text-decoration: none;
 }
-
 
 /* Nav Styles */
 
@@ -246,14 +231,13 @@ ul {
 }
 
 .main-header__item {
-    border-bottom: 1px solid #B0B0B0;
+    border-bottom: 1px solid #b0b0b0;
     padding: 0.5rem 1.25rem;
 }
 
 .main-header__item:first-child {
-    border-top: 1px solid #B0B0B0;
+    border-top: 1px solid #b0b0b0;
 }
-
 
 /* Link Styles */
 
@@ -272,7 +256,6 @@ ul {
     text-decoration: none;
 }
 
-
 /* Burger Styles */
 
 .main-header__burger {
@@ -280,7 +263,7 @@ ul {
 }
 
 .main-header__line {
-    background-color: #B0B0B0;
+    background-color: #b0b0b0;
     height: 1px;
     width: 18px;
     margin-bottom: 8px;
@@ -289,7 +272,6 @@ ul {
 .main-header__line:last-child {
     margin: 0;
 }
-
 
 /*
  * Sucesss
@@ -303,7 +285,6 @@ ul {
     font-size: 100px;
 }
 
-
 /*
  * 404
  */
@@ -315,7 +296,6 @@ ul {
 .notFound__header {
     font-size: 100px;
 }
-
 
 /*
  * Project Section
@@ -331,10 +311,11 @@ ul {
 
 .projects__link {
     align-items: center;
-    background: linear-gradient(to left, #09C6F9, #045DE9);
-    display: flex; 
+    /* background: linear-gradient(to left, #09c6f9, #045de9); */
+    display: flex;
     justify-content: center;
     overflow: hidden;
+    position: relative;
 }
 
 .projects__link:first-child {
@@ -342,15 +323,15 @@ ul {
 }
 
 .projects__link:nth-child(2) {
-    background: linear-gradient(315deg, #017B5F 0%, #98DE5B 74%);
+    background: linear-gradient(315deg, #017b5f 0%, #98de5b 74%);
 }
 
 .projects__link:nth-child(3) {
-    background: linear-gradient(315deg, #EC9F05 0%, #FF4E00 74%);
+    background: linear-gradient(315deg, #ec9f05 0%, #ff4e00 74%);
 }
 
 .projects__link:nth-child(4) {
-    background: linear-gradient(315deg, #FFDD00 0%, #FBB034 74%);
+    background: linear-gradient(315deg, #ffdd00 0%, #fbb034 74%);
 }
 
 .projects__link:last-child {
@@ -360,6 +341,13 @@ ul {
 .projects__image {
     height: 150px;
     width: 150px;
+}
+
+.projects__description {
+    color: #ffffff;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
 }
 
 /*
@@ -404,7 +392,6 @@ ul {
     margin-bottom: 0;
 }
 
-
 /*
  * Contact Section
  */
@@ -419,7 +406,6 @@ ul {
     padding: 2rem 0 3rem 0;
 }
 
-
 /* Form Styles */
 
 .contact__form {
@@ -433,18 +419,18 @@ ul {
 }
 
 ::placeholder {
-    color: #DCDCDC;
+    color: #dcdcdc;
 }
 
 .contact__form-text-input {
     font-family: NeueMontrealRegular;
     border-style: none;
-    border-bottom: 2px solid #DCDCDC;
+    border-bottom: 2px solid #dcdcdc;
     padding: 0 0 0.5rem 0;
 }
 
 .contact__form-message {
-    border: 2px solid #DCDCDC;
+    border: 2px solid #dcdcdc;
     font-family: NeueMontrealRegular;
     line-height: 1.5;
     padding: 1rem 1.5rem 1rem 1rem;
@@ -467,9 +453,9 @@ ul {
 }
 
 .contact__form-button {
-    background-color: #DCDCDC;
+    background-color: #dcdcdc;
     border-style: solid;
-    border-color: #DCDCDC;
+    border-color: #dcdcdc;
     color: white;
     letter-spacing: 5px;
     padding: 1rem;
@@ -485,7 +471,6 @@ ul {
 .contact__form-button:hover {
     cursor: pointer;
 }
-
 
 /*
  * Footer Section
@@ -517,7 +502,7 @@ ul {
 }
 
 .footer__links:before {
-    content: "";
+    content: '';
     position: absolute;
     width: 0;
     height: 4px;
@@ -538,11 +523,10 @@ ul {
 }
 
 .footer__copyright {
-    color: #B0B0B0;
+    color: #b0b0b0;
     font-size: 13px;
     padding-left: 1.25rem;
 }
-
 
 /*
  * Media Queries
@@ -554,7 +538,6 @@ ul {
         width: 80%;
     }
 }
-
 
 /* Small devices (portrait tablets and large phones, 550px and up) */
 
@@ -591,7 +574,7 @@ ul {
         font-family: NeueMontrealBold;
     }
     .main-header__link:before {
-        content: "";
+        content: '';
         position: absolute;
         width: 0;
         height: 4px;
@@ -638,7 +621,6 @@ ul {
     }
 }
 
-
 /* Medium devices (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
@@ -672,7 +654,6 @@ ul {
         font-size: 20px;
     }
 }
-
 
 /* Large devices (laptops/desktops, 992px and up) */
 
@@ -739,7 +720,6 @@ ul {
         font-size: 15px;
     }
 }
-
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 
@@ -848,11 +828,9 @@ ul {
     }
 }
 
-
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
 
 /*
  * Hide visually and from screen readers
@@ -862,7 +840,6 @@ ul {
 [hidden] {
     display: none !important;
 }
-
 
 /*
  * Hide only visually, but have it available for screen readers:
@@ -886,7 +863,6 @@ ul {
     /* 1 */
 }
 
-
 /*
  * Extends the .sr-only class to allow the element
  * to be focusable when navigated to via the keyboard:
@@ -904,7 +880,6 @@ ul {
     width: auto;
 }
 
-
 /*
  * Hide visually and from screen readers, but maintain layout
  */
@@ -912,7 +887,6 @@ ul {
 .invisible {
     visibility: hidden;
 }
-
 
 /*
  * Clearfix: contain floats
@@ -928,14 +902,13 @@ ul {
 
 .clearfix::before,
 .clearfix::after {
-    content: " ";
+    content: ' ';
     display: table;
 }
 
 .clearfix::after {
     clear: both;
 }
-
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -948,12 +921,11 @@ ul {
 }
 
 @media print,
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 1.25dppx),
-(min-resolution: 120dpi) {
+    (-webkit-min-device-pixel-ratio: 1.25),
+    (min-resolution: 1.25dppx),
+    (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
-
 
 /* ==========================================================================
    Print styles.
@@ -976,18 +948,18 @@ ul {
         text-decoration: underline;
     }
     a[href]::after {
-        content: " (" attr(href) ")";
+        content: ' (' attr(href) ')';
     }
     abbr[title]::after {
-        content: " (" attr(title) ")";
+        content: ' (' attr(title) ')';
     }
     /*
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
-    a[href^="#"]::after,
-    a[href^="javascript:"]::after {
-        content: "";
+    a[href^='#']::after,
+    a[href^='javascript:']::after {
+        content: '';
     }
     pre {
         white-space: pre-wrap !important;
