@@ -1,16 +1,24 @@
+// Load Environmental Variables in Development Mode
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
+
+// NPM Packages
 const express = require('express');
 const bodyParser = require('body-parser');
 
+// Routes
 const indexRouter = require('./routes/index');
 const aboutRouter = require('./routes/about');
 const contactRouter = require('./routes/contact');
 const errorController = require('./controllers/error');
-const { port } = require('./config/config');
 
 const app = express();
 
+// View Engine
 app.set('view engine', 'ejs');
 
+// Parsing and Static Asset Serving Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
@@ -22,6 +30,6 @@ app.use(contactRouter);
 // 404 Page Handling
 app.use(errorController);
 
-app.listen(port || process.env.PORT, () => {
-    console.log('Portfolio app listening on port', port);
-});
+app.listen(process.env.PORT, () =>
+    console.log(`Server listening on port ${process.env.PORT}...`)
+);
