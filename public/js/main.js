@@ -4,7 +4,6 @@ const navShow = () => {
     const nav = document.querySelector('.main-header__nav');
 
     burger.addEventListener('click', () => {
-        // Toggle Nav
         nav.classList.toggle('main-header__nav--active');
     });
 };
@@ -55,7 +54,7 @@ const headerHoverStyles = () => {
     }
 };
 
-document.addEventListener('DOMContentLoaded', function (event) {
+document.addEventListener('DOMContentLoaded', function () {
     navShow();
     checkIfFilled();
     headerHoverStyles();
