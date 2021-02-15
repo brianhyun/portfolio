@@ -320,12 +320,13 @@ ul {
     height: 100%;
     padding: 1rem;
     position: absolute;
+    top: 0;
+    left: 0;
     visibility: hidden;
     opacity: 0;
     transition: visibility 1s, opacity 1s;
-    top: 0;
-    left: 0;
     width: 100%;
+    z-index: 9998;
 }
 
 .projects__link:hover .projects__description {
