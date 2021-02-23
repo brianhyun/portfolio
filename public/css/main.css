@@ -401,7 +401,7 @@ ul {
 }
 
 .about__paragraph {
-    margin-bottom: 0.7rem;
+    margin-bottom: 2rem;
 }
 
 .about__paragraph:last-child {
@@ -644,7 +644,11 @@ ul {
     /* Footer */
     .footer {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer__nav:first-child {
+        grid-column: 1 / 4;
+        grid-row: 1;
     }
     /* Contact */
     .contact {
@@ -764,18 +768,12 @@ ul {
     }
     /* About */
     .about {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        /* Erase default padding styles when moving into desktop screens. */
         padding: 5rem 0 3rem;
         width: 100%;
     }
     .about__grid-item {
-        grid-column: 2 / 4;
-        grid-row: 1;
-        padding-left: 3rem;
-        width: 70%;
-        margin: 0;
+        width: 50%;
+        margin: 0 auto;
     }
     .about__header {
         font-size: 120px;
@@ -793,10 +791,6 @@ ul {
         font-size: 24px;
     }
     /* Footer */
-    .footer {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
     .footer__nav {
         margin-bottom: 10rem;
     }
